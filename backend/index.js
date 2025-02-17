@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const flash = require("express-flash");
 const path = require("path");
