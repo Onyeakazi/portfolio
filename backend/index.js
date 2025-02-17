@@ -47,7 +47,7 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // Routes
-app.use('/', projectRoutes);
+app.use('/api', projectRoutes);
 
 app.get("/", (req, res) => {
     res.json("API is working!");
