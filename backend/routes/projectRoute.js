@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
     res.json("API is working!");
 });
 
-router.get("/projects", async (req, res) => {
+router.get("/api/projects", async (req, res) => {
     try{
         const projects = await Projects.find();
         res.json({success: true, projects});
