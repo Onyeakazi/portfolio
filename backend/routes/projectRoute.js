@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
     res.json("API is working!");
 });
 
-router.get("/api/projects", async (req, res) => {
+router.get("/projects", async (req, res) => {
     try{
         const projects = await Projects.find();
         res.json({success: true, projects});
@@ -138,10 +138,6 @@ router.get("/editProject/:id/edit", async(req, res) => {
         res.redirect("/api/index");
     }
 });
-
-
-
-module.exports = router;
 
 
 module.exports = router;
