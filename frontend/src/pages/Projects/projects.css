@@ -1,0 +1,98 @@
+.section {
+    max-width: 912px !important;
+    margin: 16% auto;
+    padding: 0 15px;
+    position: static;
+    min-height: 100vh;
+}
+
+.section .title {
+    display: flex;
+    justify-content: center;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.section .sub{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+.project-card img {
+    width: 100%;
+    height: 203px;
+    object-fit: cover;
+}
+
+.card-body{ 
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.list-group {
+    flex-wrap: wrap;
+    top: 85%;
+    font-size: 7px;
+    letter-spacing: 0px;
+    font-weight: 500;
+    margin-left: -5px;
+}
+
+.project-card:hover .project-link1,
+.project-card:hover .github-link1{
+    display: block;
+ }
+
+.project-link1 {
+    display: none;
+    background-color: #aeabab66;
+    border-radius: 50%;
+    padding: 12px 12px;
+    position: absolute;
+    top: -138%;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    left: 53%;
+    z-index: 2;
+}
+
+.github-link1 {
+    display: none;
+    background-color: #aeabab66;
+    border-radius: 50%;
+    position: absolute !important;
+    top: -138%;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    left: 33%;
+    z-index: 2;
+}
+
+.github-link1 i {
+    padding: 16px 16px;
+}
+
+@media (max-width: 768px) {
+    .section {
+        margin: 30% auto;
+    }
+
+    .section .sub{
+        text-align: center;
+        font-size: 18px;
+    }
+    
+
+}

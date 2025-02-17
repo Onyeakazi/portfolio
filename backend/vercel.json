@@ -1,0 +1,22 @@
+{
+<<<<<<< HEAD
+    "version": 2,
+=======
+>>>>>>> a27672f (changes on hero section)
+    "builds": [
+        {
+            "src": "index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+<<<<<<< HEAD
+            "src": "/api/(.*)",
+=======
+            "src": "/(.*)",
+>>>>>>> a27672f (changes on hero section)
+            "dest": "/index.js"
+        }
+    ]
+}

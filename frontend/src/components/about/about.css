@@ -1,0 +1,282 @@
+.custom-container {
+    max-width: 870px !important;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.about-section {
+    padding: 4rem 0;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+}
+  
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: absolute;
+    width: 24%;
+    margin-left: 4px;
+    background-color: #e9e6e5;
+    padding: 14px 13px;
+    border-radius: 15px;
+}
+  
+.timeline-card {
+    background-color: rgb(212, 212, 212) !important;
+    border: none !important;
+    border-radius: 10px;
+    padding: 23px 17px;
+}
+
+.timeline .timeline-d {
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    top: -24px;
+    left: -21px;
+}
+
+.timeline .timeline-o{
+    position: absolute;
+    margin: -65px 67px;
+}
+
+.timeline .timeline-o h5 {
+    font-size: 18px;
+    margin-top: 4px;
+}
+
+.timeline .timeline-o p {
+    font-size: 12px;
+    width: 133px;
+    margin-top: -2px;
+}
+
+  .center-logo {
+    margin: 2rem 0;
+  }
+  
+.center-icon {
+    position: absolute;
+    width: 221px;
+    height: 198px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: -32px;
+    background-color: #e9e6e5;
+    left: 41%;
+}
+  
+.profile-card {
+    background-color: rgb(197, 172, 140) !important;
+    border: none !important;
+    padding: 1.5rem;
+    border-radius: 16px !important;
+    text-align: justify;
+    width: 119%;
+    line-height: 16px;
+    margin-left: -35px;
+}
+  
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+  
+.profile-image {
+    left: -3%;
+    top: 23px;
+    position: absolute;
+    width: 65px;
+    height: 61px;
+    border-radius: 50%;
+    border: 3px solid #c08369;
+    background: radial-gradient(black, transparent);
+}
+
+.profile-card .pro-name {
+    margin-left: 52px;
+    margin-top: -20px;
+    font-weight: 700;
+}
+
+.profile-card .pro-d {
+    font-size: 14px;
+    margin-left: 52px;
+}
+
+.my-stack {
+    position: relative;
+    background-color: #e9e6e5;
+    width: 65%;
+    top: 7px;
+    margin-left: 313px;
+    height: 218px;
+    border-radius: 20px;
+    padding: 11px 14px;
+    overflow: hidden;
+}
+
+.my-stack::before,
+.my-stack::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(233 230 229 / 96%), rgba(233, 230, 229, 1));
+    z-index: 1;
+    filter: blur(8px); 
+}
+
+.my-stack::before {
+    left: -80px;
+}
+
+.my-stack::after {
+    right: -71px;
+}
+
+.card-b {
+    height: auto;
+    margin-bottom: -20px !important;
+}
+
+.about-btn {
+    text-align: center;
+    align-items: center;
+    display: grid;
+    background-color: #f5f5f5;
+    border: 1px solid #00000094;
+    border-radius: 20px;
+    width: 12%;
+    padding: 8px;
+    color: #00000096;
+    position: absolute;
+    left: 44%;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide2 {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.logos {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.logo-slide {
+    display: inline-block;
+    animation: 5s slide infinite linear;
+}
+
+.logo-slide img {
+    height: 50px;
+    margin: 0 20px;
+}
+ 
+.logos2 {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.logo-slide2 {
+    display: inline-block;
+    animation: 6s slide2 infinite linear;
+}
+
+.logo-slide2 img {
+    height: 50px;
+    margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        margin-top: -50px;
+    }
+
+    .about-title {
+        margin-bottom: 2px;
+    }
+
+    .profile-card {
+        width: 103%;
+        left: 2rem;
+        margin-top: -34px;
+    }
+
+    .profile-card .pro-name {
+        font-size: 33px;
+        margin-left: 86px;
+    }
+
+    .profile-card .pro-d { 
+        margin-bottom: 32px;
+        font-size: 24px;
+        line-height: 30px;
+        margin-left: 86px;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .center-icon {
+        margin-top: 53%;
+        width: 91%;
+        height: 38%;
+        left: 2rem;
+    }
+
+    .timeline {
+        margin-top: 111%;
+        width: 91%;
+        left: 2rem;
+    }
+
+    .my-stack {
+        margin-top: 152%;
+        width: 101%;
+        left: -19rem;
+    }
+
+    .my-stack h3 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    .about-btn {
+        width: 31%;
+        left: 34%;
+        font-size: 14px;
+        margin-top: 30px;
+    }
+}
+
+  
+  
+  

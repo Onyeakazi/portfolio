@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard | Software Engineer</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index" class="logo d-flex align-items-center">
+        <span class="d-none d-lg-block">My Dashboard</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <span class="d-none d-md-block ps-2">Chiemena Godswill</span>
+          </a><!-- End Profile Iamge Icon -->
+
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Project</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="addProject">
+              <i class="bi bi-circle"></i><span>Add New Project</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Add A New Project</h1>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+
+              <!-- Flash Messages -->
+              <% if (success.length > 0) { %>
+                <div id="successAlert" class="alert alert-success alert-dismissible fade show" role="alert">
+                  <%= success %>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              <% } %>
+
+              <% if (error.length > 0) { %>
+                <div id="errorAlert" class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <%= error %>
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+              <% } %>
+
+              <!-- Multi Columns Form -->
+              <form class="row g-3" action="/api/submit" method="POST" enctype="multipart/form-data">
+                <div class="col-md-12">
+                  <label for="inputProject5" class="form-label">Project Title</label>
+                  <input type="text" class="form-control" id="inputProject5" name="title">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputGithub5" class="form-label">Github Link</label>
+                  <input type="text" class="form-control" id="inputGithub5" name="github">
+                </div>
+                <div class="col-md-6">
+                  <label for="inputProjectLink5" class="form-label">Project Link</label>
+                  <input type="text" class="form-control" id="inputProjectLink5" name="project">
+                </div>
+                <div class="col-12">
+                  <label for="inputDescription5" class="form-label">Description</label>
+                  <textarea type="text" class="form-control" id="inputDescription5" rows="4" cols="4" name="description"></textarea>
+                </div>
+                <div class="col-md-12">
+                  <label for="inputImage" class="form-label">Upload Project Image</label>
+                  <input type="file" class="form-control" id="inputImage" name="image" accept="image/*">
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label">Technology Stack</label>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="html" name="stack" value="HTML">
+                    <label class="form-check-label" for="html">HTML</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="css" name="stack" value="CSS">
+                    <label class="form-check-label" for="css">CSS</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="js" name="stack" value="JavaScript">
+                    <label class="form-check-label" for="js">JavaScript</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="react" name="stack" value="React">
+                    <label class="form-check-label" for="react">React</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Nodejs" name="stack" value="Nodejs">
+                    <label class="form-check-label" for="Nodejs">Nodejs</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Bootstrap" name="stack" value="Bootstrap">
+                    <label class="form-check-label" for="Bootstrap">Bootstrap</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Laravel" name="stack" value="Laravel">
+                    <label class="form-check-label" for="Laravel">Laravel</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="MongoDB" name="stack" value="MongoDB">
+                    <label class="form-check-label" for="MongoDB">MongoDB</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="PHP" name="stack" value="PHP">
+                    <label class="form-check-label" for="PHP">PHP</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Tailand" name="stack" value="Tailand">
+                    <label class="form-check-label" for="Tailand">Tailand</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Typescript" name="stack" value="Typescript">
+                    <label class="form-check-label" for="Typescript">Typescript</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="Vite" name="stack" value="Vite">
+                    <label class="form-check-label" for="Vite">Vite</label>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+              </form><!-- End Multi Columns Form -->
+
+              <script>
+                // Function to hide the alert after 5 seconds (5000ms)
+                setTimeout(function () {
+                  let successAlert = document.getElementById("successAlert");
+                  let errorAlert = document.getElementById("errorAlert");
+              
+                  if (successAlert) {
+                    successAlert.style.transition = "opacity 0.5s ease-out";
+                    successAlert.style.opacity = "0";
+                    setTimeout(() => successAlert.remove(), 500); // Remove after fade-out
+                  }
+              
+                  if (errorAlert) {
+                    errorAlert.style.transition = "opacity 0.5s ease-out";
+                    errorAlert.style.opacity = "0";
+                    setTimeout(() => errorAlert.remove(), 500); // Remove after fade-out
+                  }
+                }, 5000);
+              </script>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright. All Rights Reserved
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="/assets/vendor/echarts/echarts.min.js"></script>
+  <script src="/assets/vendor/quill/quill.min.js"></script>
+  <script src="/assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="/assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+</body>
+
+</html>
