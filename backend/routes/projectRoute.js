@@ -10,7 +10,6 @@ router.get("/", (req, res) => {
 });
 
 router.get("/projects", async (req, res) => {
-    console.log("routes reached!")
     try{
         const projects = await Projects.find();
         res.json({success: true, projects});
